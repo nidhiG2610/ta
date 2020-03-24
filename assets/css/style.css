@@ -1,0 +1,17 @@
+﻿
+/**
+  *  This website is a college assignment created by
+  *  Nidhi Gajera 
+  *  and Nami Dave.
+  *  This website is for college/university professors and lecturers, who can 
+  *  find appropriate homeworks, lab reports, project reports and assignments checker means TA- Teaching Assistant.
+  *  The user can use various filters like, page, language, speed and course
+  *  The user can search for TAs and assign them homeworrks ao assignments.  
+  *  
+  */
+
+
+body {
+    background-color: aqua;
+    font-family: Georgia, Times, Times New Roman, serif;
+}
