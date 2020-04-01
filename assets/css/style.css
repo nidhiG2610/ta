@@ -7,11 +7,194 @@
   *  find appropriate homeworks, lab reports, project reports and assignments checker means TA- Teaching Assistant.
   *  The user can use various filters like, page, language, speed and course
   *  The user can search for TAs and assign them homeworrks ao assignments.  
-  *  
+  *     color code- #95A844
+  *     color code- #44494F
+  *     color code- #333333
   */
 
 
 body {
-    background-color: aqua;
     font-family: Georgia, Times, Times New Roman, serif;
+}
+* {
+    box-sizing: border-box;
+    border:none;
+}
+ul li{
+    list-style:none;
+}
+a {
+    color: #333333;
+    text-decoration: none;
+}
+a:focus, a:hover {
+    color:#ffffff;
+    text-decoration: none;
+}
+ul{
+    margin-bottom:0px;
+}
+.clear {
+    clear: both;
+}
+
+/*******************Navigation Start**********************/
+    .top-banner {
+    background-color: #95A844;
+    height: 40px;
+    color: #333333;
+}
+    .top-banner .container, .bottom-banner .container{
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+    .top-banner ul li, .bottom-banner ul li {
+        padding-right: 20px;
+    }
+.navbar-brand{
+    padding:0px;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    border: none;
+}
+.navbar-default {
+    background-color: #333333;
+    color: #95A844;
+    height: 83px;
+    border-color: none;
+    border-radius: 0px;
+}
+ul.nav {
+    padding-top: 18px;
+}
+    .navbar-default .navbar-nav > li > a {
+        color: #fff;
+    }
+
+        .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+            color: #44494F;
+            background-color: #fff;
+            border-radius: 3px;
+        }
+.saparator {
+    font-size: 55px;
+    align-content: center;
+    color: #ffffff;
+}
+.navbar-header .tag-line {
+    color: #ffffff;
+    padding-top: 34px;
+}
+.navbar-left > li {
+    float: left;
+    position: relative;
+    display: block;
+}
+
+/*******************Navigation End**********************/
+
+.carousel-inner > .item > a > img, .carousel-inner > .item > img {
+    height: 400px;
+}
+.carousel{
+    margin:20px 0px 20px 0px;
+}
+.our-services {
+    padding: 30px;
+    border: 15px solid #bbb;
+    align-content: center;
+    margin: 0px 13px 20px 13px;
+}
+.service-title{
+    font-size:45px;
+    color:#95A844;
+    text-align:center;
+}
+.service-text{
+    padding:30px;
+}
+.service-list{
+    text-align:center;
+}
+.service-list-innderdiv {
+    margin: 40px 0px 40px 0px;
+}
+.service-description {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #95A844;
+}
+.testimonials{
+    margin-bottom:40px;
+}
+/*******************Footer start**********************/
+.page-footer {
+    background-color: #95A844;
+    color: #333333;
+    padding: 10px 0px 10px 0px;
+    line-height: 30px;
+}
+.img-circle {
+    border: 5px solid #bbb;
+    box-shadow: 5px rgba(0, 0, 0, 0.2);
+}
+.bottom-banner {
+    height: 40px;
+    color: #95A844;
+    background-color: #333;
+}
+    .bottom-banner a {
+        color: #95A844;
+    }
+
+        .bottom-banner a:hover {
+            color: #ffffff;
+        }
+        .socialmediaicons .fa {
+            padding: 10px;
+            width: 30px;
+            border-radius: 50%;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #333;
+            color: white;
+        }
+.slideshow-container {
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 40px 30px 20px 30px;
+    text-align: center;
+    background-color: #f2f2ef;
+    color: #95A844;
+    border:5px solid #bbb;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+/*******************Footer End**********************/
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
 }

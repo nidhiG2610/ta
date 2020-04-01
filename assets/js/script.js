@@ -1,2 +1,2 @@
 // JavaScript source code
-alert("hi");
+console.log("hi");
