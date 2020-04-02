@@ -137,6 +137,59 @@ ul.nav {
     border-right: 2px solid #95A844;
     padding-right:60px;
 }
+.filter-button {
+    padding: 5px 25px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #95A844;
+    border: none;
+    border-radius: 5px;
+}
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #95A844;
+    border: none;
+    border-radius: 5px;
+    /*box-shadow: 0 9px #999;*/
+}
+
+    .button:hover {
+        background-color: #333333;
+    }
+
+    .button:active {
+        background-color: #333333;
+      /*  box-shadow: 0 5px #666; */
+        transform: translateY(4px);
+    }
+.filter-panel-cover {
+    text-align: center;
+    padding: 20px;
+   /* margin-left: 165px;*/
+}
+.inner-cover {
+    width: 927px;
+    margin: 0 auto;
+}
+.ta-details{
+    border:2px solid #bbb;
+    margin:20px;
+    padding:25px;
+}
+    .ta-details > *{
+        float:none;
+    }
+.ta-details-panel{
+    text-align:left;
+}
 /*******************Footer start**********************/
 .page-footer {
     background-color: #95A844;
