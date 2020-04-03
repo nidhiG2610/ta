@@ -38,7 +38,12 @@ ul{
 .clear {
     clear: both;
 }
-
+.center{
+    text-align:center;
+}
+.margin-top-div{
+    margin-top:40px;
+}
 /*******************Navigation Start**********************/
     .top-banner {
     background-color: #95A844;
@@ -130,12 +135,40 @@ ul.nav {
 .testimonials{
     margin-bottom:40px;
 }
-.contact-us{
+.contact-us,.login{
     margin:30px 0px 30px 0px;
 }
 .contact-us-form {
     border-right: 2px solid #95A844;
     padding-right:60px;
+}
+.login-form {
+    border-left: 2px solid #95A844;
+    padding-left: 60px;
+}
+.login img{
+    opacity:0.9;
+}
+    .login-form p a:focus, .login-form p a:hover {
+        color: #95A844;
+    }
+.forgot-password {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.valid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #28a745;
+}
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
 }
 .filter-button {
     padding: 5px 25px;
@@ -149,8 +182,8 @@ ul.nav {
     border-radius: 5px;
 }
 .button {
-    padding: 15px 25px;
-    font-size: 24px;
+    padding: 5px 15px;
+    font-size: 20px;
     text-align: center;
     cursor: pointer;
     outline: none;
@@ -190,8 +223,24 @@ ul.nav {
 .ta-details-panel{
     text-align:left;
 }
+.form-cover{
+    padding-left:20%;
+    padding-right:20%;
+}
+.form-row {
+    display: flex;
+    align-items: center;
+}
+.form-cover .form-group {
+    padding-right:30px;
+}
+.large-input .form-control{
+    width: 517px;
+}
+.small-input .form-control {
+    width: 360px;
+}
 /*******************timeline start**********************/
-
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
@@ -365,9 +414,9 @@ ul.nav {
     text-align: center;
     padding: 20px;
 }
-.active, .dot:hover {
-    background-color: #717171;
-}
+    .dot-container .active, .dot-container .dot:hover {
+        background-color: #717171;
+    }
 /* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
