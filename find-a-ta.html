@@ -414,7 +414,7 @@ function showSlides(n) {
 						    experience:"Gajera",
 						};
 						dataArray['Nidhi']={
-                            profile:"ta-1.png",
+                            profile:"ta-2.png",
 						    name:"Nidhi",
 						    subjects:"M",
 						    speed:"Gajera",
@@ -422,7 +422,7 @@ function showSlides(n) {
 						    experience:"Gajera",
 						};
                         dataArray['Parth']={
-                            profile:"ta-2.png",
+                            profile:"ta-3.png",
 						    name:"Parth",
 						    subjects:"M",
 						    speed:"Gajera",
@@ -430,7 +430,39 @@ function showSlides(n) {
 						    experience:"Gajera",
 						};
 						dataArray['Komal']={
-                            profile:"ta-3.png",
+                            profile:"ta-4.png",
+						    name:"Komal",
+						    subjects:"M",
+						    speed:"Gajera",
+						    language:"Gajera",
+						    experience:"Gajera",
+						};
+                        dataArray['Komal']={
+                            profile:"ta-4.png",
+						    name:"Komal",
+						    subjects:"M",
+						    speed:"Gajera",
+						    language:"Gajera",
+						    experience:"Gajera",
+						};
+                        dataArray['Komal']={
+                            profile:"ta-5.png",
+						    name:"Komal",
+						    subjects:"M",
+						    speed:"Gajera",
+						    language:"Gajera",
+						    experience:"Gajera",
+						};
+                        dataArray['Komal']={
+                            profile:"ta-6.png",
+						    name:"Komal",
+						    subjects:"M",
+						    speed:"Gajera",
+						    language:"Gajera",
+						    experience:"Gajera",
+						};
+                        dataArray['Komal']={
+                            profile:"ta-8.png",
 						    name:"Komal",
 						    subjects:"M",
 						    speed:"Gajera",
@@ -438,7 +470,12 @@ function showSlides(n) {
 						    experience:"Gajera",
 						};
 					
-            $(".img-circle ").click(function(){
+            $(".img-circle ").click(function(){ 
+                $(this).addClass('active-image');
+                if( $(this).siblings().hasClass('active-image') == true )
+                {
+                    $(this).siblings().removeClass('active-image');
+                }
             var key = $(this).data("category");
                        $("img.ta-profile").attr("src","assets/images/"+dataArray[key].profile);
                        $("h3.ta-name").text(dataArray[key].name);
