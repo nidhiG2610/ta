@@ -352,12 +352,7 @@ label.error{
   }
   
   /* Make sure that all arrows are pointing leftwards */
-  .container::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-  }
+  
 
   /* Make sure all circles are at the same spot */
   .left::after, .right::after {
@@ -433,6 +428,12 @@ label.error{
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+.carousel-caption {
+    text-shadow: 2px 2px #fff;
+    color: #95A844;
+    font-style: bold;
+    font-weight: 600;
+}
 
 .active-image {
     border: 5px solid rgb(149, 168, 68);
@@ -443,4 +444,56 @@ label.error{
         text-align: center;
         margin: 25px 0;
     }
+    
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+   
+
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (max-width: 768px) {
+        .navbar-nav > li > a {
+            display: none;
+        }
+        .contact-us img {
+            width: 500px;
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .large-input .form-control {
+        width: 300px;
+    }
+
+    .small-input .form-control {
+        width: 200px;
+    }
+    .contact-us img {
+        width: 300px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) and (min-width:992px) {
+    .login{
+        text-align:center;
+    }
+    .large-input .form-control{
+        width:400px;
+    }
+    .small-input .form-control{
+        width:200px;
+    }
+    .contact-us img {
+        width:400px;
+    }
+}
+
