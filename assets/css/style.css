@@ -10,6 +10,8 @@
   *     color code- #95A844
   *     color code- #44494F
   *     color code- #333333
+    we have used several js plugins such as js validations link - https://validatejs.org/
+    Reference Website: https://www.editage.com/
   */
 
 
@@ -153,9 +155,9 @@ label.error{
 .login img{
     opacity:0.9;
 }
-    .login-form p a:focus, .login-form p a:hover {
-        color: #95A844;
-    }
+.login-form p a:focus, .login-form p a:hover, .service-list-innderdiv > h4 > a:hover {
+    color: #95A844;
+}
 .forgot-password {
     margin-left: 10%;
     margin-right: 10%;
