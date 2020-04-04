@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <!-- End Bootstrap CSS -->
+    <style>
+        .ta-details-panel h3, .ta-details-panel h4 {
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
@@ -136,7 +141,7 @@
             <div class="row">
                 <div class="our-services">
                     <div class="service-title">Find a TA</div>
-                    <div class="service-text">
+                    <div class="service-text center">
                         Serach your Teaching Assistant by using below filters: Add some text here
                         <div class="filter-panel-cover">
                             <form>
@@ -186,7 +191,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <button class="filter-button">Click Me</button>
+                                <button class="filter-button">Search</button>
                             </form>    
                         </div>
                     </div>
@@ -194,14 +199,14 @@
                         <div class="service-list">
                                                                                                           
                             <div class="ta-list" id="myList">
-                                <img src="assets/images/ta-1.png" class="img-circle " data-category="Nami" alt="service-image" width="120" height="120" />
-                                <img src="assets/images/ta-2.png" class="img-circle " data-category="Nidhi" alt="service-image" width="120" height="120" />
-                                <img src="assets/images/ta-3.png" class="img-circle " data-category="Parth" alt="service-image" width="120" height="120" />
-                                <img src="assets/images/ta-4.png" class="img-circle " data-category="Komal" alt="service-image" width="120" height="120" />
-                                <img src="assets/images/ta-5.png" class="img-circle " data-category="nature" alt="service-image" width="120" height="120" />
-                                <img src="assets/images/ta-6.png" class="img-circle " data-category="nature" alt="service-image" width="120" height="120" />
-                                <img src="assets/images/ta-7.png" class="img-circle " data-category="nature" alt="service-image" width="120" height="120" />
-                                <img src="assets/images/ta-8.png" class="img-circle " data-category="nature" alt="service-image" width="120" height="120" />
+                                <img src="assets/images/ta-1.png" class="img-circle " data-category="Kiara Cherry" alt="service-image" width="120" height="120" />
+                                <img src="assets/images/ta-2.png" class="img-circle " data-category="Dee Anderson" alt="service-image" width="120" height="120" />
+                                <img src="assets/images/ta-3.png" class="img-circle " data-category="Greg Hanger" alt="service-image" width="120" height="120" />
+                                <img src="assets/images/ta-4.png" class="img-circle " data-category="Linda Lee" alt="service-image" width="120" height="120" />
+                                <img src="assets/images/ta-5.png" class="img-circle " data-category="Lisa John" alt="service-image" width="120" height="120" />
+                                <img src="assets/images/ta-6.png" class="img-circle " data-category="Bob Ander" alt="service-image" width="120" height="120" />
+                                <img src="assets/images/ta-7.png" class="img-circle " data-category="Robin Banks" alt="service-image" width="120" height="120" />
+                                <img src="assets/images/ta-8.png" class="img-circle " data-category="Polly Tech" alt="service-image" width="120" height="120" />
                             </div>
                             <div class="ta-details">
                                 <div class="row">
@@ -210,13 +215,11 @@
                                     </div>
                                     <div class="col-sm-6 col-md-9 col-lg-6">
                                         <div class="ta-details-panel">
-                                            <h3 class="ta-name">Nami Dave</h3>
-                                            <h4 class="ta-subjects">Co-founder & CEO</h4>
-                                            <h4 class="ta-speed">Co-founder & CEO</h4>
-                                            <h4 class="ta-language">Co-founder & CEO</h4>
-                                            <h4 class="ta-exerperince">Co-founder & CEO</h4>
-                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum <br />dolor sit amet..Lorem ipsum dolor sit amet...</p>
-                                            <p>Lorem ipsum dolor sit amet.Lorem ipsum <br />dolor sit amet..Lorem ipsum dolor sit amet...</p>
+                                           <h3 class="ta-fullname">Name:&nbsp;</h3> <h3 class="ta-name">Kiara Cherry</h3><br />
+                                           <h4 class="ta-fullname">Subjects:&nbsp;</h4> <h4 class="ta-subjects">English, Grammer, plagiarism, proof reading</h4><br />
+                                           <h4 class="ta-fullname">Speed:&nbsp;</h4> <h4 class="ta-speed">1 Page per hour</h4><br />
+                                           <h4 class="ta-fullname">Languages:&nbsp;</h4> <h4 class="ta-language">English</h4><br />
+                                           <h4 class="ta-fullname">Experience:&nbsp;</h4> <h4 class="ta-exerperince">5 years</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -404,70 +407,70 @@ function showSlides(n) {
 
 
 
-            var dataArray=new Object();
-                        dataArray['Nami']={
+                        var dataArray=new Object();
+                        dataArray['Kiara Cherry']={
                             profile:"ta-1.png",
-						    name:"Nidhi",
-						    subjects:"M",
-						    speed:"Gajera",
-						    language:"Gajera",
-						    experience:"Gajera",
+                            name:"Kiara Cherry",
+                            subjects:"English, Grammer, plagiarism, proof reading",
+                            speed:"1 Page per hour",
+						    language:"English",
+                            experience:"5 years",
 						};
-						dataArray['Nidhi']={
+                        dataArray['Dee Anderson']={
                             profile:"ta-2.png",
-						    name:"Nidhi",
-						    subjects:"M",
-						    speed:"Gajera",
-						    language:"Gajera",
-						    experience:"Gajera",
+                            name:"Dee Anderson",
+						    subjects:"C, C++, C#",
+						    speed:"2 page per hour",
+						    language:"English, French",
+						    experience:"3 years",
 						};
-                        dataArray['Parth']={
+                        dataArray['Greg Hanger']={
                             profile:"ta-3.png",
-						    name:"Parth",
-						    subjects:"M",
-						    speed:"Gajera",
-						    language:"Gajera",
-						    experience:"Gajera",
+                            name:"Greg Hanger",
+						    subjects:"Social Studies, Manuscripts, Labour Law",
+						    speed:"5 page per hour",
+						    language:"English",
+						    experience:"2 years",
 						};
-						dataArray['Komal']={
+                        dataArray['Linda Lee']={
                             profile:"ta-4.png",
-						    name:"Komal",
-						    subjects:"M",
-						    speed:"Gajera",
-						    language:"Gajera",
-						    experience:"Gajera",
+                            name:"Linda Lee",
+						    subjects:"Maths, Algebra, Physics",
+						    speed:"5 pages per hour",
+                            language:"English, Ojibway, Cree, Inuktitut",
+						    experience:"25 years",
 						};
-                        dataArray['Komal']={
-                            profile:"ta-4.png",
-						    name:"Komal",
-						    subjects:"M",
-						    speed:"Gajera",
-						    language:"Gajera",
-						    experience:"Gajera",
-						};
-                        dataArray['Komal']={
+                        dataArray['Lisa John']={
                             profile:"ta-5.png",
-						    name:"Komal",
-						    subjects:"M",
-						    speed:"Gajera",
-						    language:"Gajera",
-						    experience:"Gajera",
+                            name:"Lisa John",
+						    subjects:"Sketching, Telegraphy, stenography",
+						    speed:"1 page per hour",
+						    language:"English, French",
+						    experience:"20 years",
 						};
-                        dataArray['Komal']={
+                        dataArray['Bob Ander']={
                             profile:"ta-6.png",
-						    name:"Komal",
-						    subjects:"M",
-						    speed:"Gajera",
-						    language:"Gajera",
-						    experience:"Gajera",
+                            name:"Bob Ander",
+						    subjects:"Accountings, Taxation, Global Economy",
+						    speed:"5 pages per hour",
+                            language:"English, Ojibway, Cree, Inuktitut, French",
+						    experience:"30 years",
 						};
-                        dataArray['Komal']={
+                        dataArray['Robin Banks']={
+                            profile:"ta-7.png",
+                            name:"Robin Banks",
+                            subjects:"Criminology, psychology, philosophy",
+						    speed:"1 page per hour",
+                            language:"English, japanese, French",
+						    experience:"2 years",
+						};
+                        dataArray['Polly Tech']={
                             profile:"ta-8.png",
-						    name:"Komal",
-						    subjects:"M",
-						    speed:"Gajera",
-						    language:"Gajera",
-						    experience:"Gajera",
+                            name:"Polly Tech",
+                            subjects:"Biology, zoology, botany, Microbiology",
+						    speed:"5 pages per hour",
+						    language:"English",
+						    experience:"5 years",
 						};
 					
             $(".img-circle ").click(function(){ 
