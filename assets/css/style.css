@@ -99,8 +99,12 @@ ul.nav {
     display: block;
 }
 
+/************************Removing defaut css*********************8*/
+label.error{
+    color:red;
+}
+/*********************************************8*/
 /*******************Navigation End**********************/
-
 .carousel-inner > .item > a > img, .carousel-inner > .item > img {
     height: 400px;
 }
@@ -196,6 +200,7 @@ ul.nav {
 
     .button:hover {
         background-color: #333333;
+        color:#fff;
     }
 
     .button:active {
@@ -428,6 +433,8 @@ ul.nav {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+
+
 /*******************Footer End**********************/
 @media screen and (max-width: 768px) {
     .col-sm-4 {

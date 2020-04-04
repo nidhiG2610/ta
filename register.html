@@ -74,174 +74,163 @@
     <!--------------Navbar end--------------------->
     <!--------------Container Start--------------------->
     <div class="container">
-      
-        <!--------------Contact us form start--------------------->
-        
+
+        <!--------------Registration form start--------------------->
+
         <div class="col-sm-12 col-md-6 col-lg-12 contact-us our-services">
             <div class="service-title">Register</div>
-                <form action="/action_page.php" class="needs-validation" novalidate>
-                    <div class="tab-content">
-                        <div class="form-cover tab-pane fade in active">
-
-                            <div class="form-row">
-                                <div class="form-group ">
-                                    <label for="title">Title</label>
-                                    <div class="dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                                            Select Title
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="">Mr.</a></li>
-                                            <li><a href="">Miss.</a></li>
-                                            <li><a href="">Mrs.</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="firstname">Firstname</label>
-                                    <input type="text" class="form-control" id="firstname" placeholder="Enter firstname" name="firstname" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                                <div class="form-group ">
-                                    <label for="lastname">Lastname</label>
-                                    <input type="text" class="form-control" id="lastname" placeholder="Enter lastname" name="lastname" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
+            <form action="/action_page.php" class="needs-validation register-form" novalidate>
+                <div class="tab-content">
+                    <div class="form-cover tab-pane fade in active" id="tab1">
+                        <div class="form-row">
+                            <div class="form-group ">
+                                <label for="title">Title</label>
+                                <div class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                        Select Title
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="">Mr.</a></li>
+                                        <li><a href="">Miss.</a></li>
+                                        <li><a href="">Mrs.</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group large-input">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
+                            <div class="form-group">
+                                <label for="firstname">Firstname</label>
+                                <input type="text" class="form-control" id="firstname" placeholder="Enter firstname" name="firstname" required>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group ">
-                                    <label for="title">Phone number</label>
-                                    <div class="dropdown" id="country-codes">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                                            <span class="value">+91</span>
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#" value="+47">Norway (+47)</a></li>
-                                            <li><a href="#" value="+46">Sweeden (+46)</a></li>
-                                            <li><a href="#" value="+79">Danmark (+79)</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="form-group small-input">
-                                    <label for="firstname"></label>
-                                    <input type="text" class="form-control" id="firstname" placeholder="Enter firstname" name="firstname" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
+                            <div class="form-group ">
+                                <label for="lastname">Lastname</label>
+                                <input type="text" class="form-control" id="lastname" placeholder="Enter lastname" name="lastname" required>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group large-input">
-                                    <label for="pwd">Password:</label>
-                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group large-input">
-                                    <label for="pwd">Confirm Password:</label>
-                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                            </div>
-
-                            <button class="button"><a data-toggle="tab" href="#tab2">Next </a></button>           
-                    </div>
-
-                        <div class="form-cover tab-pane fade" id="tab2">
-                            <div class="form-row">
-                                <div class="form-group large-input">
-                                    <label for="email">Birth Date</label>
-                                    <input type="text" class="form-control" id="datepicker" name="bdate" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group ">
-                                    <label for="title">Address Details</label>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="streetno">Street Number</label>
-                                    <input type="text" class="form-control" id="streetno" placeholder="Enter Street Number" name="streetno" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                                <div class="form-group ">
-                                    <label for="streetname">Street Name</label>
-                                    <input type="text" class="form-control" id="streetname" placeholder="Enter Street Name" name="streetname" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="city">City</label>
-                                    <input type="text" class="form-control" id="city" placeholder="Enter City" name="city" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                                <div class="form-group ">
-                                    <label for="state">State</label>
-                                    <input type="text" class="form-control" id="state" placeholder="Enter State" name="state" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="postal">Postal Code</label>
-                                    <input type="text" class="form-control" id="postal" placeholder="Enter Postal Code" name="postal" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                                <div class="form-group ">
-                                    <label for="state">Country</label>
-                                    <input type="text" class="form-control" id="country" placeholder="Enter Country" name="country" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group large-input">
-                                    <label for="firstname">University/College</label>
-                                    <input type="text" class="form-control" id="university" placeholder="Enter University" name="university" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group large-input">
-                                    <label for="hdyhau">How did you here about us?</label>
-                                    <input type="text" class="form-control" id="hdyhau" placeholder="Enter here" name="hdyhau" required>
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="button">Submit</button>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group large-input">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group ">
+                                <label for="title">Phone number</label>
+                                <div class="dropdown" id="country-codes">
+                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                        <span class="value">+91</span>
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" value="+47">Norway (+47)</a></li>
+                                        <li><a href="#" value="+46">Sweeden (+46)</a></li>
+                                        <li><a href="#" value="+79">Danmark (+79)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group small-input">
+                                <label for="Phone"></label>
+                                <input type="text" class="form-control" id="phone" placeholder="Enter Phone Number" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group large-input">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group large-input">
+                                <label for="cpwd">Confirm Password:</label>
+                                <input type="password" class="form-control" id="cpwd" placeholder="Enter password" name="cpswd" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                        <button class="button nextButton"><a data-toggle="tab" href="#tab2">Next </a></button>
                     </div>
-                </form>
-            </div>
-        
+                    <div class="form-cover tab-pane fade" id="tab2">
+                        <div class="form-row">
+                            <div class="form-group large-input">
+                                <label for="email">Birth Date</label>
+                                <input type="text" class="form-control" id="datepicker" name="bdate" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group ">
+                                <label for="title">Address Details</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="streetno">Street Number</label>
+                                <input type="text" class="form-control" id="streetno" placeholder="Enter Street Number" name="streetno" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="streetname">Street Name</label>
+                                <input type="text" class="form-control" id="streetname" placeholder="Enter Street Name" name="streetname" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" placeholder="Enter City" name="city" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="state">State</label>
+                                <input type="text" class="form-control" id="state" placeholder="Enter State" name="state" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="postal">Postal Code</label>
+                                <input type="text" class="form-control" id="postal" placeholder="Enter Postal Code" name="postal" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="state">Country</label>
+                                <input type="text" class="form-control" id="country" placeholder="Enter Country" name="country" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group large-input">
+                                <label for="firstname">University/College</label>
+                                <input type="text" class="form-control" id="university" placeholder="Enter University" name="university" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group large-input">
+                                <label for="hdyhau">How did you here about us?</label>
+                                <input type="text" class="form-control" id="hdyhau" placeholder="Enter here" name="hdyhau" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                        <button class="button"><a data-toggle="tab" href="#tab1">Previous </a></button>
+                        <button type="submit" class="button">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
         <!--------------contact us form end--------------------->
-       
+
     </div>
     <!--------------Testimonial End------------------------------->
     <!--------------Container End------------------------------->
@@ -316,27 +305,65 @@
     <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-validation-1.19.1/dist/jquery.validate.min.js"></script>
     <script type="text/javascript" src="assets/css/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
     <!--End jQuery first, then Popper.js, then Bootstrap JS -->
     <script>
-        (function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+        $(".nextButton").click(function(){
+            $(".register-form").validate({
+                rules: {
+
+            // compound rule
+            firstname: {
+              required: true,
+            },
+            lastname: {
+                  required: true,
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            phone: {
+              required: true,
+            },
+            pswd:{
+             required: true
+            },
+            cpswd:{
+             required: true
+            }
+
+          }
+            });
+        });
+        $(".register-form").validate({
+          rules: {
+
+            // compound rule
+            firstname: {
+              required: true,
+            },
+            lastname: {
+                  required: true,
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            phone: {
+              required: true,
+            },
+            pswd:{
+             required: true
+            },
+            cpswd:{
+             required: true
+            }
+
+          }
+        });
 
         $( function() {
     $( "#datepicker" ).datepicker();
