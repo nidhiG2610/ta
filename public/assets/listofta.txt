@@ -1,0 +1,85 @@
+/*
+                        var dataArray=new Object();
+                        dataArray['Kiara Cherry']={
+                            profile:"ta-1.png",
+                            name:"Kiara Cherry",
+                            subjects:"English, Grammer, plagiarism, proof reading",
+                            speed:"1 Page per hour",
+						    language:"English",
+                            experience:"5 years",
+                        She oversees the peer review process for submitted manuscripts, recruit high quality submissions to the journal, and promote journal policies.
+                        Under the supervision of the Executive Editor, She contributes to the development and execution of the journal's strategic direction.
+						};
+                        dataArray['Dee Anderson']={
+                            profile:"ta-2.png",
+                            name:"Dee Anderson",
+						    subjects:"C, C++, C#",
+						    speed:"2 page per hour",
+						    language:"English, French",
+						    experience:"3 years",
+                            description: "He is the ideal candidate who possess superior coding skills, excellent communication, high concentration levels, good task management, and superior problem solving and critical thinking skills."
+						};
+                        dataArray['Greg Hanger']={
+                            profile:"ta-3.png",
+                            name:"Greg Hanger",
+						    subjects:"Social Studies, Manuscripts, Labour Law",
+						    speed:"5 page per hour",
+						    language:"English",
+						    experience:"2 years",
+                            description :"He is good at Evaluate and grade students' class work, assignments, papers, and oral presentations.
+                            He is excellent in Compile, administer, and grade examinations, or assign this work to others."
+						}; Bob Frapples review manuscripts and book proposals to decide whether books should be published. 
+                            He also review and edit drafts and oversee the publication process, working closely with authors to perfect the manuscript.
+        Robbie Den is often being asked to suggest process improvements. Through her daily exposure to copy and procedures, proofreaders can evaluate and recommend changes to create efficiencies.
+                        dataArray['Linda Lee']={
+                            profile:"ta-4.png",
+                            name:"Linda Lee",
+						    subjects:"Maths, Algebra, Physics",
+						    speed:"5 pages per hour",
+                            language:"English, Ojibway, Cree, Inuktitut",
+						    experience:"25 years",
+                            description: "She is an english teacher, who have 5 years of experience in teaching as well as a master's degree in teaching. 
+                                        One of the most important skills that an english teacher will have is the ability to give constructive criticism. 
+                                       She one more important is communication as the english teacher will need to be able to communicate effectively with students."
+						};
+                        dataArray['Lisa John']={
+                            profile:"ta-5.png",
+                            name:"Lisa John",
+						    subjects:"Sketching, Telegraphy, stenography",
+						    speed:"1 page per hour",
+						    language:"English, French",
+						    experience:"20 years",
+                            description: " Lisa John in proficient in Observing, receiving, and otherwise obtaining information from all relevant sources. 
+                            In addition, She is developing, designing, or creating new applications, ideas, relationships, systems, or products, including artistic contributions."
+						};
+                        dataArray['Bob Ander']={
+                            profile:"ta-6.png",
+                            name:"Bob Ander",
+						    subjects:"Accountings, Taxation, Global Economy",
+						    speed:"5 pages per hour",
+                            language:"English, Ojibway, Cree, Inuktitut, French",
+						    experience:"30 years",
+                            descrption: " He teaches courses in business administration and management, such as accounting, finance, human resources, labor and industrial relations, marketing, and operations research. 
+                            Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.";
+						};
+                        dataArray['Robin Banks']={
+                            profile:"ta-7.png",
+                            name:"Robin Banks",
+                            subjects:"Criminology, psychology, philosophy",
+						    speed:"1 page per hour",
+                            language:"English, japanese, French",
+						    experience:"2 years",
+                            description: "Pitra Sudnicki has 4 years in workforce. She is expert in Facilitated discussion, written responses and critical thinking. 
+                            During her work she successfully Communicated with students' parents on a regular basis to inform about students' progress in class."
+						};   Robin Banks promoted from Career Resource Assistant. Enhanced relationships with students and faculty by becoming a key communication foundation in the department. 
+                        dataArray['Polly Tech']={
+                            profile:"ta-8.png",
+                            name:"Polly Tech",
+                            subjects:"Biology, zoology, botany, Microbiology",
+						    speed:"5 pages per hour",
+						    language:"English",
+						    experience:"5 years",
+						};  Polly tech is expert in monitoring student performance, and adjusting teaching strategies and techniques for improved content delivery. She has experience of
+                                Setting up exams, assessments, and experiments in accordance with curriculum requirements and standards of the state and district.
+                            In addition, She is proficient in communicating any student issues to parents, counselors, and other relevant staff members.
+        */

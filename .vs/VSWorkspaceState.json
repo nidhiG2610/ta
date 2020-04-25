@@ -3,8 +3,8 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\assets\\css\\bootstrap-3.4.1-dist\\css"
+    "\\node"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\node\\db.js",
   "PreviewInSolutionExplorer": false
 }

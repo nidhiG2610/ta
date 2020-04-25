@@ -1,0 +1,39 @@
+{
+  "name": "ta",
+  "version": "1.0.0",
+  "description": "a college project",
+  "main": "main.js",
+  "scripts": {
+    "test": "exit 1",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nidhiG2610/ta.git"
+  },
+  "keywords": [
+    "Teaching",
+    "Assistant"
+  ],
+  "author": "Nidhi Gajera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nidhiG2610/ta/issues"
+  },
+  "homepage": "https://github.com/nidhiG2610/ta#readme",
+  "dependencies": {
+    "-": "0.0.1",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.4.0",
+    "flash": "^1.1.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.3",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "save": "^2.4.0"
+  }
+}
