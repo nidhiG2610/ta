@@ -30,7 +30,9 @@ function addUser(){
                     email: "required",
                     contact_no: "required",
                     password: "required",
-                    cpassword: "required",
+                    cpassword: {
+                    equalTo: "#password"
+                     },
                     birth_date: "required",
                     country :"required",
                     state:"required",
@@ -56,7 +58,7 @@ function addUser(){
                     },
                     contact_no: "Please specify your Phone number.",
                     password: "Please enter your password.",
-                    cpassword: "Please enter confirm password.",
+                    cpassword: "Enter Confirm Password Same as Password.",
                     birth_date: "Please specify your Birth Date.",
                     country: "Please enter Address Details.",
                     state:"Please enter Address Details.",
@@ -78,19 +80,20 @@ function addUser(){
                         body: (data)
                       }).then((response) => { 
                      console.log(response);  
-                           if(response.status == 200){
-                                    var ok = confirm("Your Data is submitted!");
+                           if(response.status == 500){
+                                    $(".error").text(data.message);
+                                    
+                            }else{
+                                 var ok = confirm("Your Data is submitted!");
                                     if(ok == true){
                                     window.location.replace("index.html");
-                                    }
-                            }else{
-                                $(".error").text(data.message);
+                               
                             }
-                    } );         
-                 }
-        });              
+                    }        
+                 });
+        }              
             
-        };
+        });  }
 
 // Registration form end
 

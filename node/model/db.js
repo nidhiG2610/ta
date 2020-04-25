@@ -1,17 +1,17 @@
 const bcrypt = require('bcrypt-nodejs');
 
  const db = require('../conection.js');
-var User = {  //INSERT INTO `register` (`id`, `name`, `email`, `password`) VALUES (NULL, 'nidhi', 'ni@gmail.com', 'nidhi123');
+var User = {  
 	addUSer:(userdata,callback) =>{	
 
 			// Create a password salt
 			// Salt and hash password
 		let inserted_id;
-		return db.query("Insert into `users` (`title`,`first_name`,`last_name`,`user_name`,`email`,`country_code`,`contact_no`,`password`,`birth_date`,`institute`,`reference`)values(?,?,?,?,?,?,?,?,?,?,?)",
+		 db.query("Insert into `users` (`title`,`first_name`,`last_name`,`user_name`,`email`,`country_code`,`contact_no`,`password`,`birth_date`,`institute`,`reference`)values(?,?,?,?,?,?,?,?,?,?,?)",
                 [userdata.title,userdata.first_name,userdata.last_name,userdata.user_name,userdata.email,userdata.country_code,userdata.contact_no,userdata.password,userdata.birth_date,userdata.institute,userdata.reference],
                (err,res)=>{
 			        if(err)throw err;
-
+        console.log(res.insertId);
                             // address table
                             inserted_id= res.insertId;
                              db.query("Insert into `address` (`user_id`,`streetno`,`streetname`,`city`,`state`,`postal`,`country`)values(?,?,?,?,?,?,?)",
@@ -19,6 +19,7 @@ var User = {  //INSERT INTO `register` (`id`, `name`, `email`, `password`) VALUE
                             (err,result)=>{			       
                             if(err)throw err;
 		                    });  
+       return res.insertId;
     });
 	},
 
@@ -54,28 +55,3 @@ var User = {  //INSERT INTO `register` (`id`, `name`, `email`, `password`) VALUE
 };  
  module.exports = User;
  
-/*
-var User = myNewModel.extend({
-	tableName:"register"
-});
-*/
-	// save details in user table
-//module.exports.createUser = function(newUser,callback){   	console.log(newUser);  }	
-	
-
-
-
-// OR
- 
-//user = new myNewModel({tableName: "register"});
-
-/*
-exports.create = function(name, email, password){
-	
-	 var values = [name, email, password]
-	 db.get().query('INSERT INTO register (name,email,password) VALUES(?, ?, ?)', values, function(err, result) {
-    if (err) throw err;
-    console.log(result);
-  })
-});
-*/

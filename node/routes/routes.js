@@ -7,13 +7,19 @@ var passport = require('passport');
 var  LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt-nodejs');
 const app = express();
+
 // parse application/x-www-form-urlencoded   
      app.use(bodyParser.urlencoded({
       extended: true
     }));
     
 
-//register user   $2a$10$jqdau/jMryKJksTifi0gVe2TfMqoiCwDCRnpyqJGp1GIFXEahS.IG   nidhi@123  ji
+/*
+*  registration method to check user authentication
+*  @params req Http request
+*  @ params res
+*  return res.json  
+*/   
 router.post('/register',(req,res)=> {
     var newData = req.body;
     
@@ -21,29 +27,19 @@ router.post('/register',(req,res)=> {
      newData.password = bcrypt.hashSync(newData.password);
       
         User.addUSer(newData,(err,result)=>{
-				    if(err){
-                    result.send({'message':'Your data is not Proper. Please Check again.'});
-                    } else{
-                     result.send({'message':'Added Successfylly'});		
-                    }			   
-                    console.log(result);
-                    return result;
+                    if (err) throw err;
+                    res.json({ message: 'Added Successfylly!' });
         });
-     
-
 });
 
 
-//login user    
-/*router.post('/login',(req,res)=> {
-    var userData = req.body;
-        const data = User.checkUser(userData,(err,result)=>{
-				    if(err) throw err;
-                    res.send({'message':'succeed','data':result});                                     	
-		}); 
-}); */
 
-//successRedirect: '/',
+/*
+*  login method to check user authentication
+*  @params req Http request
+*  @ params res
+*  return res.json  
+*/
 router.post('/login',(req, res,next) => {
     passport.authenticate('local', function (err, user, info) {    
         if (err) {
@@ -59,15 +55,10 @@ router.post('/login',(req, res,next) => {
             res.status(401).json(info);
         }
     })(req, res, next)
-
-/*     passport.authenticate('local', function(req, res) {	
-       console.log('in post');
-  //  res.redirect('/');	res.send({'message':'succeed','data':result});	 
-        })(req, res, next)
-*/
   });
 
-//login user
+  
+//login user  passport authentication
 passport.use(new LocalStrategy( {
     usernameField: 'user_name',    // define the parameter in req.body that passport can use as username and password
     passwordField: 'password'
@@ -101,20 +92,34 @@ passport.deserializeUser(function(user, done) { console.log('in deserialize user
   done(null, user);
 });
 
-//login
+/*
+* login method
+*  @params req Http request
+*  @ params res
+*  return res.json  
+*/
 router.get('/login' , function(req,res){ 
 	res.send({'status':500,'message':'fail','data':'error name'});
 });
 
+/*
+* Logout  method
+*  @params req Http request
+*  @ params res
+*  return res.json  
+*/
 router.get('/logout' , (req,res) => {
 	req.logout();
-	//req.flash('success_msg','you are loggedout');
-	//res.redirect('/users/login'); res.send({'message':'succeed','data':result});
 });
 
 
 
-//search TA
+/*
+*  Search teaching Assistat as per filters
+*  @params req Http request
+*  @ params res
+*  return res.json  
+*/
 router.post('/search',(req,res)=> {
     var userData = req.body;
         const data = User.searchUser(userData,(err,result)=>{
@@ -124,6 +129,12 @@ router.post('/search',(req,res)=> {
 });
 
 // get List Of Teaching assistant
+/*
+*  get list of teaching Assistat as per filters
+*  @params req Http request
+*  @ params res
+*  return res.json  
+*/
 router.get('/getListOfTa',(req,res)=> {
     var userData = req.body;
         const data = User.getAllUser(userData,(err,result)=>{
@@ -142,24 +153,3 @@ router.get('/getTADetailsbyid/:id',(req,res)=> {
 });
 
 module.exports = router;
-
-/* Request 
-firstname:nidhi
-lastname:gajera
-email:nidhi@gmail.com
-phone:89009-0
-pswd:ngajera
-cpswd:ngajera
-bdate:04/2/2019
-streetno:ww
-streetname:WEWQ
-city:Thunder%20Bay
-state:WQEWWQE
-postal:qwewq
-country:SWQ
-university:WQW
-hdyhau:er
-
-
-Content-Type:application/x-www-form-urlencoded
-*/
