@@ -26,10 +26,10 @@
         <div class="container">
             <!---add button here as a navbar-toggle----->
             <ul class="collapse navbar-collapse navbar-nav navbar-right">
-                <li id="user_NAme"></li>
-                <li><a href="login.html">SignIn</a></li>
+                <li id="user_NAme"><a href="login.html">SignIn</a></li>
                 <li><a href="tel:123-456-7890"><span class="glyphicon glyphicon-earphone"></span> +00 1515151515</a></li>
                 <li><a href="mailto:myemail@something.com"><span class="glyphicon glyphicon-envelope"></span> myemail@something.com </a></li>
+                <li id="logout" onclick="logout()"><a href="javascript:void();"></a></li>
             </ul>
         </div>
     </div>
@@ -56,18 +56,6 @@
                     <li><a href="how-it-works.html">How it Works?</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="contact-us.html">Contact Us</a></li>
-                    <!--li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            MORE
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Merchandise</a></li>
-                            <li><a href="#">Extras</a></li>
-                            <li><a href="#">Media</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li-->
                 </ul>
             </div>
             <div class="clear"></div>
@@ -193,6 +181,19 @@
     <!--End jQuery first, then Popper.js, then Bootstrap JS -->
     <script>
 
+    /* 
+     *   set Local storage to display logged in
+     *   user details after login
+     */
+         window.onload = function(){ 
+            if(localStorage.getItem("username")){
+                const data = (localStorage.getItem("username"));
+                const User_data = JSON.parse(data);
+                $('body').find("li#user_NAme").text( 'Hello '+User_data.user_name + "!");   
+                $('body').find("li#logout").text('Logout'); 
+                console.log(User_data.id);
+            }
+        };
     </script>
 </body>
 </html>

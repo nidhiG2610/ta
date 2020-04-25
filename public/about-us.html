@@ -23,9 +23,10 @@
         <div class="container">
             <!---add button here as a navbar-toggle----->
             <ul class="collapse navbar-collapse navbar-nav navbar-right">
-                <li><a href="login.html">SignIn</a></li>
+                <li id="user_NAme"><a href="login.html">SignIn</a></li>
                 <li><a href="tel:123-456-7890"><span class="glyphicon glyphicon-earphone"></span> +00 1515151515</a></li>
                 <li><a href="mailto:myemail@something.com"><span class="glyphicon glyphicon-envelope"></span> myemail@something.com </a></li>
+                <li id="logout" onclick="logout()"><a href="javascript:void();"></a></li>
             </ul>
         </div>
     </div>
@@ -285,6 +286,16 @@
         <script type="text/javascript" src="assets/js/script.js"></script>
         <!--End jQuery first, then Popper.js, then Bootstrap JS -->
         <script>
+            window.onload = function(){ 
+            if(localStorage.getItem("username")){
+                const data = (localStorage.getItem("username"));
+                const User_data = JSON.parse(data);
+                $('body').find("li#user_NAme").text( 'Hello '+User_data.user_name + "!");   
+                $('body').find("li#logout").text('Logout'); 
+                console.log(User_data.id);
+            }
+        };
+
 $(document).ready(function(){
   // Activate Carousel
   $("#myCarousel").carousel();

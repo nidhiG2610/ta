@@ -28,9 +28,10 @@
         <div class="container">
             <!---add button here as a navbar-toggle----->
             <ul class="collapse navbar-collapse navbar-nav navbar-right">
-                <li><a href="login.html">SignIn</a></li>
+                <li id="user_NAme"><a href="login.html">SignIn</a></li>
                 <li><a href="tel:123-456-7890"><span class="glyphicon glyphicon-earphone"></span> +00 1515151515</a></li>
                 <li><a href="mailto:myemail@something.com"><span class="glyphicon glyphicon-envelope"></span> myemail@something.com </a></li>
+                <li id="logout" onclick="logout()"><a href="javascript:void();"></a></li>
             </ul>
         </div>
     </div>
@@ -156,6 +157,7 @@
                                             <option>English</option>
                                             <option>French</option>
                                             <option>German</option>
+                                            <option>Spenish</option>
                                         </select>
                                     </div>
                                 </div>
@@ -165,10 +167,17 @@
                                         <select id="iller" class="form-control" name="subjects">
                                             <option></option>
                                             <option>English</option>
+                                            <option>English,Grammer, plagiarism, proof reading</option>
                                             <option>Programming Lenguage</option>
-                                            <option>Development</option>
+                                            <option>Social Studies, Manuscripts, Labour Law</option>
+                                            <option>Sketching, Telegraphy, stenography</option>
+                                            <option>Accountings, Taxation, Global Economy</option>
+                                            <option>Criminology, psychology, philosophy</option>
+                                            <option>Biology, zoology, botany, Microbiology</option>
                                             <option>Research</option>
-                                            <option>Labour laws</option>
+                                            <option>Literature Search</option>
+                                            <option>Scientific Editing</option>
+                                            <option>Proof Reading</option>
                                         </select>
                                     </div>
                                 </div>
@@ -180,6 +189,8 @@
                                             <option>2 Pages per hour</option>
                                             <option>1 page per hour</option>
                                             <option>5 Page per hour</option>
+                                            <option>0.4 Page per hour</option>
+                                            <option>4 Page per hour</option>
                                         </select>
                                     </div>
                                 </div>
@@ -187,10 +198,17 @@
                                     <div class="form-group ">
                                         <lable>Search by Experience</lable>
                                         <select id="iller" class="form-control" name="experience">
-                                            <option selected>6 Months</option>
                                             <option></option>
-                                            <option>10 Months</option>
-                                            <option>1 Year</option>
+                                            <option>8 Years</option>
+                                            <option>12 Years</option>
+                                            <option>22 Years</option>
+                                            <option>3 Years</option>
+                                            <option>4 Years</option>
+                                            <option>5 Years</option>
+                                            <option>6 Years</option>
+                                            <option>7 Years</option>
+                                            <option>10 Years</option>
+                                            <option>1 Years</option>
                                             <option>2 Year</option>
                                         </select>
                                     </div>
@@ -207,7 +225,7 @@
                             <div class="ta-details">
                                 <div class="row">
                                     <div class="col-sm-6 col-md-3 col-lg-3">
-                                        <img src="assets/images/ta-1.png" class="img-circle ta-profile" alt="service-image" width="150" height="150" />
+                                        <img src="assets/images/ta-2.png" class="img-circle ta-profile" alt="service-image" width="150" height="150" />
                                     </div>
                                     <div class="col-sm-6 col-md-9 col-lg-6">
                                         <div class="ta-details-panel">
@@ -217,7 +235,7 @@
                                                  <tr><td><h4 class="ta-fullname">Speed:&nbsp;</h4></td><td><h4 class="ta-speed">1 Page per hour</h4></td></tr>
                                                  <tr><td><h4 class="ta-fullname">Languages:&nbsp;</h4></td><td><h4 class="ta-language">English</h4></td></tr>
                                                  <tr><td><h4 class="ta-fullname">Experience:&nbsp;</h4></td><td><h4 class="ta-exerperince">5 years</h4></td></tr>
-                                                 <tr><td><h4 class="ta-fullname">Description:&nbsp;</h4></td><td><h4 class="ta-description">orum etalorum" (The Extremealorum" (The Extremealorum" (The Extreme Malorum" (The Extremes of Good and Evil) by Cicero</h4></td></tr>
+                                                 <tr><td><h4 class="ta-fullname">Description:&nbsp;</h4></td><td><h4 class="ta-description">She is an english teacher, who have 5 years of experience in teaching as well as a master's degree in teaching. </h4></td></tr>
                                              </table>   
                                          
                                              
@@ -348,7 +366,23 @@
     <script type="text/javascript" src="assets/js/script.js"></script>
     <script type="text/javascript" src="assets/js/methods.js"></script>
     <!--End jQuery first, then Popper.js, then Bootstrap JS -->
+    
     <script>
+    /* set Local storage to display logged in
+     *   user details after login
+     */
+    window.onload = function(){ 
+            if(localStorage.getItem("username")){
+                const data = (localStorage.getItem("username"));
+                const User_data = JSON.parse(data);
+                $('body').find("li#user_NAme").text( 'Hello '+User_data.user_name + "!");   
+                $('body').find("li#logout").text('Logout'); 
+                console.log(User_data.id);
+            }
+            
+            getListOnLoad();
+        };
+
 $(document).ready(function(){
 
         
@@ -411,6 +445,9 @@ var dataArray=[];
     function searchTA(){
         $("#ta-search-form").validate({
                 submitHandler: function(form) {
+
+                    // Search API call from database to display the list of Teaching Assistant
+
                         var data = $('#ta-search-form').serialize(); 
                         console.log(JSON.stringify(data));
                         event.preventDefault();
@@ -426,25 +463,20 @@ var dataArray=[];
                                  result.forEach(element => { 
                                   html +=('<img src="assets/images/'+ element.image +'" class="img-circle" id="img-div-'+element.id+'" data-category="'+ element.id +'" onclick="getTADetailsbyid('+element.id+')" alt="service-image" width="120" height="120" />');   
                               });
-                                     $("#myList").html(html);
-                                   /*result.forEach(element => { 
-                                    dataArray[element.first_name +" "+ element.last_name] = {  profile:element.image,
-                                                                                                name:element.first_name + " " + element.last_name,
-                                                                                                subjects:element.subjects,
-						                                                                        speed:element.speed,
-						                                                                        language:element.language,
-						                                                                        experience:element.experience,
-                                                                                            } 
-                                    });*/
-            
-                                    setTeachingAssistant(dataArray);
+                                     $("#myList").html(html);            
+                                    setTeachingAssistant(dataArray);   // set all the details of Teaching Assistant in the description
                                 });
                           }); 
                 }                     
         });
     }
 
-
+        /* 
+        * 
+        * This function is creted to put values in 
+        * all the elements of Teaching Assistant description
+        *
+        */
         function setTeachingAssistant(dataArray){
              dataArray.forEach(element => { 
                        $("img.ta-profile").attr("src","assets/images/"+element.profile);
@@ -455,77 +487,6 @@ var dataArray=[];
                        $("h4.ta-exerperince").text(element.experince);
             });
         }
-
-        /*
-                        var dataArray=new Object();
-                        dataArray['Kiara Cherry']={
-                            profile:"ta-1.png",
-                            name:"Kiara Cherry",
-                            subjects:"English, Grammer, plagiarism, proof reading",
-                            speed:"1 Page per hour",
-						    language:"English",
-                            experience:"5 years",
-						};
-                        dataArray['Dee Anderson']={
-                            profile:"ta-2.png",
-                            name:"Dee Anderson",
-						    subjects:"C, C++, C#",
-						    speed:"2 page per hour",
-						    language:"English, French",
-						    experience:"3 years",
-						};
-                        dataArray['Greg Hanger']={
-                            profile:"ta-3.png",
-                            name:"Greg Hanger",
-						    subjects:"Social Studies, Manuscripts, Labour Law",
-						    speed:"5 page per hour",
-						    language:"English",
-						    experience:"2 years",
-						};
-                        dataArray['Linda Lee']={
-                            profile:"ta-4.png",
-                            name:"Linda Lee",
-						    subjects:"Maths, Algebra, Physics",
-						    speed:"5 pages per hour",
-                            language:"English, Ojibway, Cree, Inuktitut",
-						    experience:"25 years",
-						};
-                        dataArray['Lisa John']={
-                            profile:"ta-5.png",
-                            name:"Lisa John",
-						    subjects:"Sketching, Telegraphy, stenography",
-						    speed:"1 page per hour",
-						    language:"English, French",
-						    experience:"20 years",
-						};
-                        dataArray['Bob Ander']={
-                            profile:"ta-6.png",
-                            name:"Bob Ander",
-						    subjects:"Accountings, Taxation, Global Economy",
-						    speed:"5 pages per hour",
-                            language:"English, Ojibway, Cree, Inuktitut, French",
-						    experience:"30 years",
-						};
-                        dataArray['Robin Banks']={
-                            profile:"ta-7.png",
-                            name:"Robin Banks",
-                            subjects:"Criminology, psychology, philosophy",
-						    speed:"1 page per hour",
-                            language:"English, japanese, French",
-						    experience:"2 years",
-						};
-                        dataArray['Polly Tech']={
-                            profile:"ta-8.png",
-                            name:"Polly Tech",
-                            subjects:"Biology, zoology, botany, Microbiology",
-						    speed:"5 pages per hour",
-						    language:"English",
-						    experience:"5 years",
-						};
-        */
-           
-
-
     </script>
 </body>
 </html>

@@ -23,9 +23,10 @@
         <div class="container">
             <!---add button here as a navbar-toggle----->
             <ul class="collapse navbar-collapse navbar-nav navbar-right">
-                <li><a href="login.html">SignIn</a></li>
+                <li id="user_NAme"><a href="login.html">SignIn</a></li>
                 <li><a href="tel:123-456-7890"><span class="glyphicon glyphicon-earphone"></span> +00 1515151515</a></li>
                 <li><a href="mailto:myemail@something.com"><span class="glyphicon glyphicon-envelope"></span> myemail@something.com </a></li>
+                <li id="logout" onclick="logout()"><a href="javascript:void();"></a></li>
             </ul>
         </div>
     </div>
@@ -52,18 +53,6 @@
                     <li><a href="how-it-works.html">How it Works?</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="contact-us.html">Contact Us</a></li>
-                    <!--li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            MORE
-            <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a href="#">Merchandise</a></li>
-            <li><a href="#">Extras</a></li>
-            <li><a href="#">Media</a></li>
-        </ul>
-    </li>
-    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li-->
                 </ul>
             </div>
             <div class="clear"></div>
@@ -172,15 +161,6 @@
                     </div>
                 </div>
                 <!--------------Service details End--------------------->
-                <!--------------Service panels Start--------------------->
-                <div class="row">
-                </div>
-                <!--------------Service panels End--------------------->
-                <!----div class="row">
-            <div class="service-description">
-                source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
-            </div>
-        </!--div-->
                 <div class="testimonials">
                     <div class="container">
                         <div class="service-title"> Testimonials</div>
@@ -289,6 +269,22 @@
         <script type="text/javascript" src="assets/js/script.js"></script>
         <!--End jQuery first, then Popper.js, then Bootstrap JS -->
         <script>
+     
+    /* 
+     *   set Local storage to display logged in
+     *   user details after login
+     */
+
+            window.onload = function(){ 
+            if(localStorage.getItem("username")){
+                const data = (localStorage.getItem("username"));
+                const User_data = JSON.parse(data);
+                $('body').find("li#user_NAme").text( 'Hello '+User_data.user_name + "!");   
+                $('body').find("li#logout").text('Logout'); 
+                console.log(User_data.id);
+            }
+        };
+
 $(document).ready(function(){
   // Activate Carousel
   $("#myCarousel").carousel();
