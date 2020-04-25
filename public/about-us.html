@@ -292,7 +292,7 @@
                                 var result = data.data;
                                 var html ='' ;
                             result.forEach(element => {
-                               html = '  <div class="col-sm-6 col-xs-12 service-list-innderdiv">   <img src="assets/images/'+element.image+'" class="img-circle" alt="service-image" width="170" height="170" />                     <h3 ><b>' + element.name+' </b></h3>      <h4>'+  element.position +'</h4>  <h4><b>ID:</b> '+ element.studentID +'</h4><h4><b>Email:</b>'+element.email+'</h4>  <h4><a href="'+ element.github_link +'"><b>Github Link:</b>'+ element.github_link +'</a></h4>   <p>'+element.description+'</p> </div> '; 
+                               html += '  <div class="col-sm-6 col-xs-12 service-list-innderdiv">   <img src="assets/images/'+element.image+'" class="img-circle" alt="service-image" width="170" height="170" />                     <h3 ><b>' + element.name+' </b></h3>      <h4>'+  element.position +'</h4>  <h4><b>ID:</b> '+ element.studentID +'</h4><h4><b>Email:</b>'+element.email+'</h4>  <h4><a href="'+ element.github_link +'"><b>Github Link:</b>'+ element.github_link +'</a></h4>   <p>'+element.description+'</p> </div> '; 
                             });
                         $("#aboutus-1").html(html);
                                 
