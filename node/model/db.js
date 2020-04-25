@@ -51,7 +51,10 @@ var User = {
 	getPassword:(hash,password,res)=>{  
        // Load hash from your password DB.
         return bcrypt.compare(password, hash, res);
-	}
+	},
+    getaboutUS:(req,callback)=>{ 
+		return db.query("select * from aboutus",callback);
+	},
 };  
  module.exports = User;
  

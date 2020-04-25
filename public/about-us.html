@@ -152,9 +152,10 @@
             <div class="row">
                 <div class="service-list">
                     <div class="service-title">Our Team</div>
-                    <div class="col-sm-6 col-xs-12 service-list-innderdiv">
+                    <div id="aboutus-1"></div>
+                    <div class="col-sm-6 col-xs-12 service-list-innderdiv" id="aboutus-1">
                         <img src="assets/images/nidhi1.jpg" class="img-circle" alt="service-image" width="170" height="170" />
-                        <h3><b>Nidhi Gajera</b></h3>
+                        <h3 ><b>Nidhi Gajera</b></h3>
                         <h4>Chief Operating Officer</h4>
                         <h4><b>ID:</b> 100196892</h4>
                         <h4><b>Email:</b> ngajera@confederationcollege.ca</h4>
@@ -284,9 +285,11 @@
         <script type="text/javascript" src="assets/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
         <script type="text/javascript" src="assets/css/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
+        <script type="text/javascript" src="assets/js/methods.js"></script>
         <!--End jQuery first, then Popper.js, then Bootstrap JS -->
         <script>
             window.onload = function(){ 
+            getaboutUS();
             if(localStorage.getItem("username")){
                 const data = (localStorage.getItem("username"));
                 const User_data = JSON.parse(data);
@@ -296,6 +299,26 @@
             }
         };
 
+             function getaboutUS(){
+                        event.preventDefault();
+                            fetch('http://127.0.0.1:3000/getaboutUS', {
+                            method: 'GET',
+                            mode: 'cors',
+                            headers: {'Content-Type': 'application/x-www-form-urlencoded','Access-Control-Allow-Origin':'*','Accept': 'application/json'},
+                          }).then((response) => { 
+                               response.json().then(data => { 
+                                var result = data.data;
+                                var html ='' ;
+                            result.forEach(element => {
+                               html = '  <div class="col-sm-6 col-xs-12 service-list-innderdiv">   <img src="assets/images/'+element.image+'" class="img-circle" alt="service-image" width="170" height="170" />                     <h3 ><b>' + element.name+' </b></h3>      <h4>'+  element.position +'</h4>  <h4><b>ID:</b> '+ element.studentID +'</h4><h4><b>Email:</b>'+element.email+'</h4>  <h4><a href="'+ element.github_link +'"><b>Github Link:</b>'+ element.github_link +'</a></h4>   <p>'+element.description+'</p> </div> '; 
+                            });
+                        $("#aboutus-1").html(html);
+                                
+                                      console.log(result); 
+                                   // setTeachingAssistant(dataArray);   // set all the details of Teaching Assistant in the description
+                                });
+                          }); 
+    }
 $(document).ready(function(){
   // Activate Carousel
   $("#myCarousel").carousel();

@@ -152,4 +152,12 @@ router.get('/getTADetailsbyid/:id',(req,res)=> {
 		}); 
 });
 
+// get Details Of Teaching assistant by ID
+router.get('/getaboutUS',(req,res)=> { 
+        User.getaboutUS(req,(err,result)=>{ 
+				    if(err) throw err; 
+                    res.send({'message':'succeed','data':result});                                       	
+		}); 
+});
+
 module.exports = router;
